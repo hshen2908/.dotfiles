@@ -1,6 +1,6 @@
 ### EXPORT ###
-export EDITOR='nano'
-export VISUAL='nano'
+export EDITOR='nvim'
+export VISUAL='nvim'
 export HISTCONTROL=ignoreboth:erasedups
 export PAGER='most'
 
@@ -31,7 +31,8 @@ bind "set completion-ignore-case on"
 ### ALIASES ###
 
 #list
-alias ls='ls --color=auto'
+#alias ls='ls --color=auto'
+alias ls='exa -la --git'
 alias la='ls -a'
 alias ll='ls -alFh'
 alias l='ls'
@@ -410,3 +411,6 @@ neofetch
 #sysinfo-retro
 #cpufetch
 #colorscript random
+
+set -o vi
+eval "$(starship init bash)"

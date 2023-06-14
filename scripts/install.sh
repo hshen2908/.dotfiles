@@ -6,11 +6,17 @@ sudo pacman -S nvidia
 # install display server
 sudo pacman -S xorg xorg-xinit
 
+# install window manager
+sudo pacman -S awesome
+
 # install compositor
 sudo pacman -S picom
 
 # install terminal emulator
 sudo pacman -S alacritty
+
+# install prompt
+sudo pacman -S starship
 
 # install text editor
 sudo pacman -S neovim
@@ -20,6 +26,9 @@ sudo pacman -S nitrogen
 
 # install browser
 sudo pacman -S firefox
+
+# install ls sub
+sudo pacman -S exa
 
 # install AUR helper
 sudo pacman -S base-devel
@@ -31,3 +40,5 @@ sudo pacman -S stow
 cd $HOME/.dotfiles
 stow bash
 stow xorg
+stow --adopt alacritty
+git restore .
