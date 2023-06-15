@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install video drivers
-sudo pacman -S nvidia
+# sudo pacman -S nvidia
 
 # install display server
 sudo pacman -S xorg xorg-xinit
@@ -38,7 +38,7 @@ cd $HOME/yay-git; makepkg -si; cd $HOME; rm -rf $HOME/yay-git
 # install stow
 sudo pacman -S stow
 cd $HOME/.dotfiles
-stow bash
+stow --adopt bash
 stow xorg
 stow --adopt alacritty
 git restore .
