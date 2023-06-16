@@ -56,4 +56,8 @@ fi
 
 nitrogen --restore &
 picom &
-exec awesome
+## Awesome:
+##exec awesome
+
+## Leftwm:
+exec leftwm

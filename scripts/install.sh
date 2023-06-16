@@ -3,11 +3,23 @@
 # install video drivers
 # sudo pacman -S nvidia
 
+# install AUR helper
+sudo pacman -S base-devel
+cd $HOME; git clone https://aur.archlinux.org/yay-git.git
+cd $HOME/yay-git; makepkg -si; cd $HOME; rm -rf $HOME/yay-git
+
 # install display server
 sudo pacman -S xorg xorg-xinit
 
 # install window manager
-sudo pacman -S awesome
+## Awesomewm:
+##sudo pacman -S awesome
+
+## Leftwm:
+sudo pacman -S feh # background images
+sudo pacman -S polybar # panel
+sudo pacman -S dmenu # menu
+yay -S leftwm
 
 # install compositor
 sudo pacman -S picom
@@ -29,11 +41,6 @@ sudo pacman -S firefox
 
 # install ls sub
 sudo pacman -S exa
-
-# install AUR helper
-sudo pacman -S base-devel
-cd $HOME; git clone https://aur.archlinux.org/yay-git.git
-cd $HOME/yay-git; makepkg -si; cd $HOME; rm -rf $HOME/yay-git
 
 # install stow
 sudo pacman -S stow
