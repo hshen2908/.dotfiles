@@ -16,10 +16,14 @@ sudo pacman -S --noconfirm xorg xorg-xinit
 ##sudo pacman -S awesome
 
 ## Leftwm:
-sudo pacman -S --noconfirm feh # background images
-sudo pacman -S --noconfirm polybar # panel
-sudo pacman -S --noconfirm dmenu # menu
-yay --noconfirm -S leftwm
+##sudo pacman -S --noconfirm feh # background images
+##sudo pacman -S --noconfirm polybar # panel
+##sudo pacman -S --noconfirm dmenu # menu
+##yay --noconfirm -S leftwm
+
+
+## Qtile:
+sudo pacman -S --noconfirm qtile
 
 # install compositor
 sudo pacman -S --noconfirm picom
