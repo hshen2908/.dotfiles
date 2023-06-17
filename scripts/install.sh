@@ -4,48 +4,48 @@
 # sudo pacman -S nvidia
 
 # install AUR helper
-sudo pacman -S base-devel
+sudo pacman -S --noconfirm base-devel
 cd $HOME; git clone https://aur.archlinux.org/yay-git.git
 cd $HOME/yay-git; makepkg -si; cd $HOME; rm -rf $HOME/yay-git
 
 # install display server
-sudo pacman -S xorg xorg-xinit
+sudo pacman -S --noconfirm xorg xorg-xinit
 
 # install window manager
 ## Awesomewm:
 ##sudo pacman -S awesome
 
 ## Leftwm:
-sudo pacman -S feh # background images
-sudo pacman -S polybar # panel
-sudo pacman -S dmenu # menu
-yay -S leftwm
+sudo pacman -S --noconfirm feh # background images
+sudo pacman -S --noconfirm polybar # panel
+sudo pacman -S --noconfirm dmenu # menu
+yay --noconfirm -S leftwm
 
 # install compositor
-sudo pacman -S picom
+sudo pacman -S --noconfirm picom
 
 # install terminal emulator
-sudo pacman -S alacritty
+sudo pacman -S --noconfirm alacritty
 
 # install prompt
-sudo pacman -S starship
+sudo pacman -S --noconfirm starship
 
 # install text editor
-sudo pacman -S neovim
+sudo pacman -S --noconfirm neovim
 
 # wallpaper
-sudo pacman -S nitrogen
+sudo pacman -S --noconfirm nitrogen
 
 # install browser
-sudo pacman -S firefox
+sudo pacman -S --noconfirm firefox
 
 # install ls sub
-sudo pacman -S exa
+sudo pacman -S --noconfirm exa
 
 # install stow
-sudo pacman -S stow
+sudo pacman -S --noconfirm stow
 cd $HOME/.dotfiles
 stow --adopt bash
-stow xorg
+stow --adopt xorg
 stow --adopt alacritty
 git restore .
