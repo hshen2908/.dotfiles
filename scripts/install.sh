@@ -36,6 +36,10 @@ sudo pacman -S --noconfirm starship
 
 # install text editor
 sudo pacman -S --noconfirm neovim
+sudo pacman -S --noconfirm emacs
+
+# ssh
+sudo pacman -S --noconfirm openssh
 
 # wallpaper
 sudo pacman -S --noconfirm nitrogen
@@ -53,3 +57,10 @@ stow --adopt bash
 stow --adopt xorg
 stow --adopt alacritty
 git restore .
+
+# install fonts
+git clone --filter=blob:none --sparse git@github.com:ryanoasis/nerd-fonts
+cd nerd-fonts
+git sparse-checkout add patched-fonts/JetBrainsMono patched-fonts/RobotoMono patched-fonts/Ubuntu
+./install.sh --install-to-user-path JetBrainsMono RobotoMono Ubuntu
+cd ..; rm -rf nerd-fonts
