@@ -5,6 +5,7 @@
 # Export
 export EDITOR='nvim'
 export VISUAL='nvim'
+export PATH="$HOME/.config/doom-emacs/bin:$PATH"
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -94,3 +95,6 @@ _open_files_for_editing() {
 ################################################################################
 set -o vi
 eval "$(starship init bash)"
+alias demacs="emacsclient -e '(kill-emacs)' && emacs --daemon --with-profile=doom"
+alias memacs="emacsclient -e '(kill-emacs)' && emacs --daemon --with-profile=myconfig"
+alias cemacs="emacsclient -c -a 'emacs'"
