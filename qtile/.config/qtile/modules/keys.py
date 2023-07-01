@@ -70,9 +70,7 @@ keys = [
     Key([], "XF86AudioRaiseVolume",lazy.spawn("amixer set Master 3%+")),
     Key([], "XF86AudioLowerVolume",lazy.spawn("amixer set Master 3%-")),
     Key([], "XF86AudioMute",lazy.spawn("amixer set Master toggle")),
-
-    # Emacs
-    Key([mod], "shift"], "d", lasy.spawn("demacs"), desc="Switch to doom emacs daemon"),
-    Key([mod], "shift"], "m", lasy.spawn("memacs"), desc="Switch to myconfig emacs daemon"),
-    Key([mod], "shift"], "e", lasy.spawn("cemacs"), desc="Launch emacsclient"),
+    Key([mod], "e", lazy.spawn("emacsclient -c -a 'emacs'"), desc="Launch emacsclient"),
+    Key([mod, "shift"], "d", lazy.spawn("killall emacs"), lazy.spawn("emacs --daemon --with-profile=doom"), desc="Change to doom emacs"),
+    Key([mod, "shift"], "m", lazy.spawn("killall emacs"), lazy.spawn("emacs --daemon --with-profile=myconfig"), desc="Change to myconfig emacs"),
 ]

@@ -4,9 +4,9 @@
 # sudo pacman -S nvidia
 
 # install AUR helper
-sudo pacman -S --noconfirm base-devel
-cd $HOME; git clone https://aur.archlinux.org/yay-git.git
-cd $HOME/yay-git; makepkg -si; cd $HOME; rm -rf $HOME/yay-git
+#sudo pacman -S --noconfirm base-devel
+#cd $HOME; git clone https://aur.archlinux.org/yay-git.git
+#cd $HOME/yay-git; makepkg -si; cd $HOME; rm -rf $HOME/yay-git
 
 # install display server
 #sudo pacman -S --noconfirm xorg xorg-xinit
@@ -57,7 +57,7 @@ sudo pacman -S --noconfirm exa
 sudo pacman -S --noconfirm stow
 cd $HOME/.dotfiles
 stow --adopt bash
-stow --adopt xorg
+#stow --adopt xorg
 stow --adopt alacritty
 stow --adopt qtile
 stow --adopt emacs
