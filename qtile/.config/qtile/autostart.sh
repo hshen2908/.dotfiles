@@ -11,3 +11,4 @@ eos-welcome & disown
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & disown # start polkit agent from GNOME
 
 emacs --daemon --with-profile=doom &
+xrandr -r 165
