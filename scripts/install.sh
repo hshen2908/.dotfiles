@@ -24,14 +24,35 @@
 ## Qtile:
 #sudo pacman -S --noconfirm qtile
 
+
+## Hyprland:
+yay -S rustup
+rustup default stable
+yay -S hyprland-git waybar-hyprland-git cava waybar-mpris-git python kitty fish wofi xdg-desktop-portal-hyprland-git tty-clock-git swaylockd grim slurp pokemon-colorscripts-git starship jq dunst wl-clipboard swaylock-effects-git swww-git
+git clone -b dreamy https://github.com/flick0/dotfiles
+cd dotfiles
+cp -r ./config/* ~/.config
+mkdir ~/.config/hypr/store
+touch ~/.config/hypr/store/dynamic_out.txt
+touch ~/.config/hypr/store/prev.txt
+touch ~/.config/hypr/store/latest_notif
+chmod +x ~/.config/hypr/scripts/tools/*
+chmod +x ~/.config/hypr/scripts/*
+chmod +x ~/.config/hypr/*
+cd ~
+git clone https://github.com/flick0/rgb-rs
+cd rgb-rs
+cargo build --release
+cp ./target/release/rgb ~/.config/hypr/scripts/
+
 # install compositor
 #sudo pacman -S --noconfirm picom
 
 # install terminal emulator
-sudo pacman -S --noconfirm alacritty
+#sudo pacman -S --noconfirm alacritty
 
 # install prompt
-sudo pacman -S --noconfirm starship
+#sudo pacman -S --noconfirm starship
 
 # install text editor
 sudo pacman -S --noconfirm neovim
@@ -58,12 +79,16 @@ sudo pacman -S --noconfirm stow
 cd $HOME/.dotfiles
 stow --adopt bash
 #stow --adopt xorg
-stow --adopt alacritty
-stow --adopt qtile
+#stow --adopt alacritty
+#stow --adopt qtile
 stow --adopt emacs
+stow --adopt hypr
+stow --adopt fish
 git restore .
 
 doom sync
+
+chsh -s /bin/fish
 
 # install fonts
 #git clone --filter=blob:none --sparse git@github.com:ryanoasis/nerd-fonts
