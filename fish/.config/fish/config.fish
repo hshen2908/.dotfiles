@@ -150,3 +150,4 @@ abbr -a -g demacs "emacsclient -e '(kill-emacs)' && emacs --daemon --with-profil
 abbr -a -g memacs "emacsclient -e '(kill-emacs)' && emacs --daemon --with-profile=myconfig"
 abbr -a -g cemacs "emacsclient -c -a 'emacs'"
 
+export PATH="$HOME/.config/doom-emacs/bin:$PATH"
