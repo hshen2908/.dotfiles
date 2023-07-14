@@ -21,5 +21,5 @@ $scripts/rgb &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &
 
-emacs --daemon --with-profile=doom &
-xrandr -r 165
+emacs --daemon --with-profile=doom 
+#xrandr -r 165

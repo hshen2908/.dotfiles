@@ -83,6 +83,7 @@ stow --adopt bash
 #stow --adopt qtile
 stow --adopt emacs
 stow --adopt hypr
+stow --adopt kitty
 stow --adopt fish
 git restore .
 
