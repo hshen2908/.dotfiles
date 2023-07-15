@@ -12,7 +12,7 @@ $scripts/launch_waybar &
 $scripts/tools/dynamic &
 
 # wallpaper
-$scripts/wall $config/wallpapers/cloud.png &
+$scripts/wall $config/wallpapers/moon.jpg &
 
 # effects
 $scripts/rgb &
