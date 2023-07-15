@@ -56,6 +56,7 @@ cp ./target/release/rgb ~/.config/hypr/scripts/
 
 # install text editor
 sudo pacman -S --noconfirm neovim
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 
 ## Emacs
 git clone https://github.com/plexus/chemacs2 $HOME/.emacs.d
@@ -86,6 +87,7 @@ stow --adopt hypr
 stow --adopt kitty
 stow --adopt fish
 stow --adopt starship
+stow --adopt nvim
 git restore .
 
 doom sync
