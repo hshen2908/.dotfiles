@@ -85,6 +85,7 @@ stow --adopt emacs
 stow --adopt hypr
 stow --adopt kitty
 stow --adopt fish
+stow --adopt starship
 git restore .
 
 doom sync
