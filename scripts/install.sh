@@ -78,7 +78,8 @@ sudo pacman -S --noconfirm openssh
 sudo pacman -S --noconfirm exa
 
 # install file manager
-sudo pacman -S ranger
+sudo pacman -S ranger, poppler, extra/poppler
+sudo yay -S python-pillow
 
 # install discord
 sudo pacman -S discord
@@ -94,6 +95,7 @@ stow --adopt emacs
 stow --adopt hypr
 stow --adopt wofi
 stow --adopt kitty
+stow --adopt ranger
 stow --adopt fish
 stow --adopt starship
 stow --adopt nvim
