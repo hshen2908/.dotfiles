@@ -54,9 +54,11 @@ cp ./target/release/rgb ~/.config/hypr/scripts/
 # install prompt
 #sudo pacman -S --noconfirm starship
 
-# install text editor
+# install text editors
 sudo pacman -S --noconfirm neovim
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
+
+yay -S visual-studio-code-bin
 
 ## Emacs
 git clone https://github.com/plexus/chemacs2 $HOME/.emacs.d
@@ -74,6 +76,12 @@ sudo pacman -S --noconfirm openssh
 
 # install ls sub
 sudo pacman -S --noconfirm exa
+
+# install file manager
+sudo pacman -S ranger
+
+# install discord
+sudo pacman -S discord
 
 # install stow
 sudo pacman -S --noconfirm stow
