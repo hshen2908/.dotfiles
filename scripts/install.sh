@@ -84,6 +84,10 @@ sudo yay -S python-pillow
 # install discord
 sudo pacman -S discord
 
+# install bluetooth support
+sudo pacman -S bluez bluez-utils
+systemctl enable bluetooth.service
+
 # install stow
 sudo pacman -S --noconfirm stow
 cd $HOME/.dotfiles
