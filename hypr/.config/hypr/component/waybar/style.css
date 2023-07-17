@@ -10,6 +10,7 @@
 window#waybar {
     background: rgba(21, 18, 27, 0);
     color: #BABABA;
+    padding: 0px 4px;
 }
 
 tooltip {
