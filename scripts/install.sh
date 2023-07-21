@@ -77,15 +77,18 @@ sudo pacman -S --noconfirm openssh
 # install ls sub
 sudo pacman -S --noconfirm exa
 
+# install file previewer
+sudo pacman -S --noconfirm bat
+
 # install file manager
-sudo pacman -S ranger, poppler, extra/poppler
+sudo pacman -S --noconfirm ranger, poppler, extra/poppler
 sudo yay -S python-pillow
 
 # install discord
-sudo pacman -S discord
+sudo pacman -S --noconfirm discord
 
 # install bluetooth support
-sudo pacman -S bluez bluez-utils
+sudo pacman -S --noconfirm bluez bluez-utils
 systemctl enable bluetooth.service
 
 # install stow
