@@ -45,6 +45,8 @@ cd rgb-rs
 cargo build --release
 cp ./target/release/rgb ~/.config/hypr/scripts/
 
+yay -S pacman-contrib
+
 # install compositor
 #sudo pacman -S --noconfirm picom
 

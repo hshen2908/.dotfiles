@@ -9,19 +9,20 @@
   "margin-left": 16, 
   "margin-right": 16, 
   "modules-left": [
-    "clock",
+    "battery",
     "cpu",
     "memory",
     "disk",
+    "custom/pacman",
     "temperature",
-    "custom/weather",
+    //"custom/weather",
     "hyprland/window"
   ],
   "modules-center": ["wlr/workspaces"],
   "modules-right": [
     "custom/spotify",
     "tray",
-    "battery",
+    "clock",
     "network",
     "bluetooth",
     "backlight",
@@ -67,6 +68,14 @@
   "tray": {
     "icon-size": 13,
     "spacing": 10
+  },
+  "custom/pacman": {
+    "format": "{} ",
+	  "interval": 3600,                     // every hour
+	  "exec": "checkupdates | wc -l",       // # of updates
+	  "exec-if": "exit 0",                  // always run; consider advanced run conditions
+	  "on-click": "kitty sudo pacman -Syu; pkill -SIGRTMIN+8 waybar", // update system
+	  "signal": 8
   },
   "clock": {
     "interval": 1,
