@@ -53,7 +53,7 @@ set -g man_underline -u $blue
 
 
 # Directory abbreviations
-abbr -a -g ls 'exa -la --git'
+abbr -a -g ls 'exa -laighHS --git'
 abbr -a -g l 'ls'
 abbr -a -g la 'ls -a'
 abbr -a -g ll 'ls -l'
